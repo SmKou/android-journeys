@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+*::-webkit-scrollbar { display: none }
+html { font-size: 62.5% }
+body {
+    position: relative;
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 4.0rem;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+button { font-size: 3.0rem }
+a { text-decoration: none }
+@media (min-width: 550px) {
+    h1 { font-size: 5.0rem }
+    button { font-size: 3.6rem }
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.main-nav {
+    top: 0;
+    color: #fff;
+    background: #000;
+}
+.page-nav { bottom: 0 }
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.logo .sm {
+    font-family: 'Broken Heart';
+    
+}
+.logo .kou { 
+    margin-left: -0.2rem;
+    font-family: 'Zhi Mang Xing';
+}
+.logo .sm,
+.logo .kou { font-size: 2.4rem }
+@media (min-width: 550px) {
+    .logo .sm,
+    .logo .kou { font-size: 3.0rem }
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.button,
+button {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #E0E0E0;
+    background-color: #808E9B;
+    border: 1px solid #808E9B;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.button:hover,
+button:hover,
+.button:focus,
+button:focus { 
+    outline: 0;
+    background-color: #485460;
+    border: 1px solid #485460;
+}
+.credit a { color: #E0E0E0 }
+
+.robot {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.head {
+    width: 4rem;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    height: 3rem;
+    border-radius: 4rem 4rem 0 0;
+}
+.eyes {
+    display: flex;
+    align-items: center;
+}
+.left_eye, .right_eye {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+}
+.left_eye {
+    position: relative;
+    top: 1.8rem;
+    left: 0.6rem;
+}
+.right_eye {
+    position: relative;
+    top: 1.8rem;
+    left: 1.8rem;
+}
+.upper_body {
+    width: 6rem;
+    height: 3rem;
+    display: flex;
+}
+.left_arm, .right_arm {
+    width: 0.8rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+}
+.left_arm { margin-right: 0.25rem }
+.right_arm { margin-left: 0.25rem }
+.torso {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0 0 1rem 1rem;
+}
+.lower_body {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.left_leg, .right_leg {
+    width: 0.8rem;
+    height: 2.4rem;
+    border-radius: 0 0 2rem 2rem;
+}
+.left_leg { margin-left: 0.9rem }
+.right_leg { margin-left: 0.6rem }
+
+.head,
+.left_arm,
+.torso,
+.right_arm,
+.left_leg,
+.right_leg { background: #1C1C1C }
+.left_eye, .right_eye { background-color: #E0E0E0 }
+.lgt .head,
+.lgt .left_arm,
+.lgt .torso,
+.lgt .right_arm,
+.lgt .left_leg,
+.lgt .right_leg { background: #D2DAE2 }
+.lgt .left_eye, .lgt .right_eye { background-color: #1C1C1C }
+
+.robot:hover .right_arm {
+    -webkit-transform: rotate(-145deg) translateY(1rem);
+    -moz-transform: rotate(-145deg) translateY(1rem);
+    -o-transform: rotate(-145deg) translateY(1rem);
+    -ms-transform: rotate(-145deg) translateY(1rem);
+    transform: rotate(-145deg) translateY(1rem);
+}
+.robot:hover .left_leg {
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+.robot:hover .left_eye,
+.robot:hover .right_eye { background-color: #82AAE3 }
+.robot.lgt:hover .left_eye,
+.robot.lgt:hover .right_eye { background-color: #205295 }
